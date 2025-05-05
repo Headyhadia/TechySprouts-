@@ -1,0 +1,35 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    background: rgba(92, 89, 91, 0.5);
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.closebtn {
+    border-radius: 80px;
+     display: flex;
+    justify-content: right;
+    margin: 6px;
+}
+.btndiv{
+    display: flex;
+    justify-content: right;
+}
+.form{
+    background-color: var(--color-blue);
+    background: radial-gradient(circle,rgba(245, 191, 214, 1) 0%, rgba(172, 205, 242, 1) 100%);
+    z-index: 15;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

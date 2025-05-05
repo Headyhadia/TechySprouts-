@@ -1,0 +1,52 @@
+.formcontainer {
+   padding: 25px;
+}
+.modalform{
+    width: 390px;
+}
+.signupform , .loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    width: 500px;
+}
+.signupinput , .signininput{
+    height: 30px;
+    width: 220px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.firstbtndiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.firstbtn{
+    font-size: 18px;
+    color: var(--color-pink);
+    width: 300px;
+    border-radius: 50px;
+    background-color: var(--color-yellow);
+    padding: 5px;
+    font-family: var(--font-pixel);
+}
+.secondbtn {
+    border-radius: 50px;
+    background-color: var(--color-yellow);
+    font-size: 18px;
+    color:var(--color-pink);
+    margin: 8px;
+    padding: 8px;
+    width: 90px;
+    font-family: var(--font-pixel);
+}
+.formheading{
+    color: var(--color-darkblue);
+    font-size: 35px;
+    padding: 25px;
+    font-family: var(--font-body);
+}
