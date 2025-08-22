@@ -1,32 +1,51 @@
-import React from 'react';
-import styles from './Navbar.module.css';
+import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-const Navbar = ({openModal}) => {
+const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.brand}>
-      <img src="/assets/ms-icon-310x310.png" alt="Logo" />
-       <a href='/' className={styles.title}>
-        TechySprouts Pakistan
-       </a>
-       </div>
-       <ul className={styles.menuItems}> 
+        <img src="/assets/favicon.ico" alt="Logo" />
+        <a href="/" className={styles.title}>
+          <a className={styles.techy}>Techy</a>
+          <a className={styles.sprouts}>Sprouts</a>
+        </a>
+      </div>
+      <ul className={styles.menuItems}>
         <li className={styles.menuItem}>
-            <a href='#home'>Home</a>
+          <Link to="/" className={styles.link}>
+            Home
+          </Link>
         </li>
         <li className={styles.menuItem}>
-            <a href='#courses'>Courses</a>
+          <Link to="/courses" className={styles.link}>
+            Courses
+          </Link>
         </li>
         <li className={styles.menuItem}>
-            <a href='#about'>About Us</a>
+          <Link to="/about" className={styles.link}>
+            About Us
+          </Link>
         </li>
         <li className={styles.menuItem}>
-            <a href='#contact'>Contact</a>
+          <HashLink
+            smooth
+            to="#contact"
+            className={styles.link}
+            scroll={(el) => {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            Contact
+          </HashLink>
         </li>
-       </ul>
-       <button onClick={openModal} className= {styles.button}>Get Started</button>
+      </ul>
+      <button className={styles.button}>
+        <Link to="https://forms.gle/Lrnm9NJDtru1nZwA7">Enroll Now</Link>
+      </button>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

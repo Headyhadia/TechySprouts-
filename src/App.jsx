@@ -1,33 +1,108 @@
-import { useState } from 'react';
-import styles from './App.module.css';
-import  Navbar  from "./components/Navbar/Navbar";
-import Learn from "./components/Learn/Learn";
-import Whyus from './components/Whyus/Whyus';
-import Program from './components/Programs/Programs';
-import Contact from './components/Contact/Contact';
-import LoginModal from './components/LoginModal/LoginModal';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import styles from "./App.module.css";
+import MainLayout from "./Layout/MainLayout";
+import Home from "./pages/Home";
+import AboutPage from "./pages/AboutPage";
+import CoursesPage from "./pages/CoursesPage";
+import ScrollToTop from "./components/Utility/ScrollToTop";
+import DemoPage from "./pages/DemoPage";
 
-function App() {
-const [isModalOpen, setIsModalOpen] = useState(false);
+const MotionDiv = motion.div;
 
-const handleOpenModal = () => {
-  setIsModalOpen(true);
-}
+function AnimatedRoutes() {
+  const location = useLocation();
 
-const handleCloseModal =() => {
-  setIsModalOpen(false);
-}
+  useEffect(() => {
+    if (location.hash) {
+      // Delay to allow Framer Motion animation to finish & DOM to render
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400); // match this to your animation duration
+    }
+  }, [location]);
 
   return (
-    <div className={styles.App}>
-      <Navbar openModal={handleOpenModal} />
-      <LoginModal isOpen={isModalOpen} closeModal={handleCloseModal}/>
-      <Learn />
-      <Whyus />
-      <Program/>
-      <Contact />
-    </div>
-  )
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname + location.hash}>
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <PageWrapper>
+                <Home />
+              </PageWrapper>
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <MainLayout>
+              <PageWrapper>
+                <AboutPage />
+              </PageWrapper>
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/watchdemo"
+          element={
+            <MainLayout>
+              <PageWrapper>
+                <DemoPage />
+              </PageWrapper>
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/courses"
+          element={
+            <MainLayout>
+              <PageWrapper>
+                <CoursesPage />
+              </PageWrapper>
+            </MainLayout>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
 }
 
-export default App
+function PageWrapper({ children }) {
+  return (
+    <MotionDiv
+      key={Math.random()}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </MotionDiv>
+  );
+}
+
+function App() {
+  return (
+    <div className={styles.App}>
+      <Router>
+        <ScrollToTop />
+        <AnimatedRoutes />
+      </Router>
+    </div>
+  );
+}
+
+export default App;

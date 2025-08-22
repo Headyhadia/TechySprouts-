@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  color: var(--color-darkblue);
+  height: 100vh;
+  background-color: white;
+}
+.container h1 {
+  font-family: var(--font-playful);
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}

@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.Container {
+  margin: 15px;
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainheading {
+  color: var(--color-blue);
+  font-weight: 900;
+  font-size: 43px;
+  font-family: var(--font-playful);
+}
+.heading {
+  color: var(--color-darkblue);
+  font-weight: 500;
+  font-size: 33px;
+
+  padding: 10px;
+}
+.secondaryHeading {
+  color: var(--color-darkblue);
+  font-weight: 500;
+  padding: 10px;
+}
+.headingmission {
+  color: var(--color-darkblue);
+  font-weight: 600;
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--font-playful);
+}
+.about {
+  padding: 40px;
+}
+.aboutlines {
+  padding: 10px;
+}
+.ilm {
+  padding: 40px;
+}
+.ilmlines {
+  padding: 10px;
+}
+.listContainer {
+  padding: 40px;
+}
+.list {
+  padding: 10px;
+  list-style: none;
+}
+.listItem {
+  padding: 15px;
+}
+.missionContainer {
+  padding: 40px;
+}
+.mission {
+  padding: 10px;
+}
+.endline {
+  padding: 10px;
+  font-size: 22px;
+  color: var(--color-pink);
+  font-style: italic;
+  font-weight: 600;
+  font-family: var(--font-playful);
+  text-align: center;
+}
+.boldline {
+  padding: 10px;
+  font-style: italic;
+  color: var(--color-darkblue);
+  font-size: 21px;
+}
+.link {
+  text-decoration: none;
+  color: var(--color-blue);
+  font-family: var(--font-playful);
+  padding: 5px;
+  font-weight: 900;
+  font-style: italic;
+}
+.linkSmall {
+  text-decoration: none;
+  padding: 5px;
+}

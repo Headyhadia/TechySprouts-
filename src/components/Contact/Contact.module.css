@@ -1,51 +1,48 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    background: var(--color-darkblue);
-    justify-content:space-around;
-    align-items: center;
-    padding: 50px;
-    gap: 35px;
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-darkblue);
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  gap: 35px;
 }
 .heading {
-    font-family: var(--font-playful);
-    color: var(--color-yellow);
+  font-family: var(--font-playful);
+  color: var(--color-yellow);
 }
 .contactlist {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 .contactlist a {
-    text-decoration: none;
-    color: rgb(131, 211, 248);
-   
+  text-decoration: none;
+  color: rgb(131, 211, 248);
 }
 .followlist {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
-.contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
-.follow a{
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-   
+.follow a {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
-.contactlist a{
-    padding: 10px;
-}
-
-.followlist img{
-    width: 20px;
+.contactlist a {
+  padding: 10px;
 }
 
+.followlist img {
+  width: 25px;
+}

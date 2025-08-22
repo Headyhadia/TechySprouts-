@@ -1,67 +1,134 @@
 .navbar {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items:center;
-    background-color: var(--color-pink);
-    padding: 0 20px;
-    z-index: 2;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-pink);
+  padding: 0 20px;
+  z-index: 2;
 }
 
 .navbar img {
-    border-radius: 50px;
-    width: 50px;
-    margin-right: 10px;
+  border-radius: 50px;
+  width: 50px;
+  margin-right: 10px;
 }
-.brand{
-    display: flex;
-    flex-direction: row;
+.brand {
+  display: flex;
+  flex-direction: row;
 }
 .title {
-    font-family: var(--font-pixel);
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
+  font-family: var(--font-brand);
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 600;
+}
+.techy {
+  color: rgb(138, 203, 255);
+}
+.sprouts {
+  color: rgb(162, 255, 23);
+}
+.menuItems {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 47px;
+  font-family: var(--font-body);
 }
 
-.menuItems {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 47px;
-    font-family: var(--font-body);
-    
+.link {
+  text-decoration: none;
+  color: var(--color-darkblue);
+  font-size: 23px;
+  font-weight: 500;
 }
-.menuItem a {
-    text-decoration: none;
-    color: var(--color-darkblue);
-    font-size: 22px;
-    font-weight: 500;
+.button {
+  color: var(--color-yellow);
+  background-color: var(--color-darkblue);
+  border-radius: 100px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: var(--font-body);
 }
-.button{
-    color:  var(--color-yellow);
-    background-color: var(--color-darkblue);
-    border-radius: 100px;
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 21px;
-    font-family: var(--font-body);
+.button a {
+  color: var(--color-yellow);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 830px) {
-    .navbar {
-        flex-direction: column;
-    }
+  .navbar {
+    flex-direction: column;
+  }
 
-    .menuItem {
-     padding-top: 15px;
-    }
-    .title{
-        padding-top: 10px;
-    }
-    
+  .menuItem {
+    padding-top: 15px;
+  }
+  .title {
+    padding-top: 13px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .menuItem {
+    padding-top: 15px;
+  }
+  .title {
+    padding-top: 13px;
+  }
+  .menuItems {
+    gap: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .button {
+    font-size: 18px;
+  }
+}
+/* Hover effect */
+.button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: click effect */
+.button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.link {
+  text-decoration: none;
+  color: var(--color-darkblue);
+  font-size: 23px;
+  font-weight: 500;
+  position: relative; /* needed for underline */
+  transition: color 0.3s ease;
+}
+
+/* Color change on hover */
+.link:hover {
+  color: var(--color-yellow);
+}
+
+/* Underline effect */
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* small gap under text */
+  width: 0;
+  height: 2px;
+  background: var(--color-yellow);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
 }

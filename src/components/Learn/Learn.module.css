@@ -1,83 +1,102 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5% 5%;
-    background-color: var(--color-gray);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5% 5%;
+  background-color: var(--color-gray);
 }
 
 .title {
-    padding: 10px 0;
-    font-family: var(--font-playful);
-    font-size: 45px;
-    color: var(--color-blue);
-    text-align: center;
-    line-height: 1.5;
+  padding: 10px 0;
+  font-family: var(--font-playful);
+  font-size: 45px;
+  color: var(--color-blue);
+  text-align: center;
+  line-height: 1.5;
 }
 
 .buttons {
-    display: flex;
-    flex-direction: row;
-    
+  display: flex;
+  flex-direction: row;
 }
 
 .buttons a {
-    padding: 10px;
-    font-size: 22px;
-    text-decoration: none;
-    border-radius: 100px;
-    color: var(--color-yellow);
-    background: var(--color-darkblue);
-    margin: 25px 10px;
-    text-align: center;
+  padding: 10px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 100px;
+  color: var(--color-yellow);
+  background: var(--color-darkblue);
+  margin: 25px 10px;
+  text-align: center;
 }
 .learn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .para {
-    text-align: center;
-    margin: 15px 10px 0px 10px;
-    
-    font-size: 22px;
-    
+  text-align: center;
+  margin: 15px 10px 0px 10px;
+
+  font-size: 22px;
 }
 
 .kidsdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10%;
-    margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 .kids {
-    width: 330px;
-    animation: ball-sway 3s ease-in-out infinite;
-    transform-origin: center;
-    display: block;
-    margin: auto;
-    border-radius: 50%; /* ensure it's a circle */
+  width: 330px;
+  animation: ball-sway 3s ease-in-out infinite;
+  transform-origin: center;
+  display: block;
+  margin: auto;
+  border-radius: 50%; /* ensure it's a circle */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  }
-  
-  @keyframes ball-sway {
-    0%   { transform: rotate(0deg); }
-    25%  { transform: rotate(5deg); }
-    50%  { transform: rotate(0deg); }
-    75%  { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
-  }
+}
 
-  @media screen and (max-width: 830px) {
-    .container {
-        flex-direction: column;
-        
-    }
-   .kidsdiv{
-    margin-top: 35px;
-   }
+@keyframes ball-sway {
+  0% {
+    transform: rotate(0deg);
   }
-  
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+  }
+  .kidsdiv {
+    margin-top: 35px;
+  }
+  .kids {
+    width: 300px;
+  }
+}
+/* Hover effect */
+.buttons a:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: click effect */
+.buttons a:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

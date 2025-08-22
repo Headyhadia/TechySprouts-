@@ -1,13 +1,15 @@
 :root {
-    /*colors*/
-    --color-blue: #418de3;
-    --color-pink: #c6408a;
-    --color-yellow: #ffde59;
-    --color-darkblue: #2f3b69;
-    --color-gray: #dfd9d9;
+  /*colors*/
+  --color-blue: #418de3;
+  --color-pink: #c6408a;
+  --color-yellow: #ffde59;
+  --color-darkblue: #2f3b69;
+  --color-gray: #dfd9d9;
+  --color-green: #50b72a;
 
-    /*Fonts*/
-    --font-pixel: 'Pixelify Sans', sans-serif;
-    --font-playful: 'Gloria Hallelujah', Arial, sans-serif;
-    --font-body: 'Sniglet', Arial, sans-serif;
+  /*Fonts*/
+  --font-pixel: "Pixelify Sans", sans-serif;
+  --font-playful: "Gloria Hallelujah", Arial, sans-serif;
+  --font-body: "Sniglet", Arial, sans-serif;
+  --font-brand: "fredoka", Arial, sans-serif;
 }
